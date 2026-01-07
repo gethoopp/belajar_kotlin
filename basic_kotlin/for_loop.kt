@@ -16,4 +16,15 @@ fun for_loop() {
     for (i in 0..arrayLength) {
         println("ini adalah index " + i + " Isinya " + dataArray.get(i))
     }
+
+
+    
+}
+
+
+fun perulangan(nilai: Int) {
+    var nilaiUlangan = nilai - 1
+  for (i in 0..nilaiUlangan) {
+   println(i);
+}
 }

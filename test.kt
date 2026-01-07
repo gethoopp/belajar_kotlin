@@ -10,6 +10,8 @@ import basic_kotlin.sayCheers
 import basic_kotlin.sayWhen
 import basic_kotlin.functionRecursive
 import basic_kotlin.tailRecursive
+import basic_kotlin.lambda_expression
+import basic_kotlin.perulangan
 
 fun main() {
     when_expression()
@@ -25,16 +27,31 @@ fun main() {
     println(result)
     println(sayCheers("Haliim"))
     println(sayWhen(90))
-    println(functionRecursive(20))
-    println(tailRecursive(20))
+    println(functionRecursive(10))
+    println(tailRecursive(1))
+    lambda_expression() 
+    perulangan(10);
+    println(InputNama("anjing") { value: String -> filterName(value) })
+     var counter = 0
 
-    
+    val anonyMousFunction = fun() {
+       counter++
+    }
 
 
+    val counterFunction = fun() {
+        counter++
+    }
+
+
+   anonyMousFunction()
+   counterFunction()
+
+ print(counter)
 
 }
 
 /*kotlinc test.kt -include-runtime -d test.jar
-kompile dulu kotlinc test.kt basic_kotlin/*.kt -include-runtime -d test.jar
+ kotlinc test.kt basic_kotlin/*.kt -include-runtime -d test.jar
 java -jar test.jar
 */
